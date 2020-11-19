@@ -13,7 +13,7 @@ Feature: Wex Task
 #  For this scenario, browse to Amazon's webpage, locate the Amazon's search bar, type "iPhone" and submit.
 #  Count how many products are in the result list, how many of its items starts with "iPhone" name and how many contains the keyword "iPhone".
 #  Then validate if the number of items which the name starts with iPhone is greater than 30% of total items and if the number of items that contains the keyword "iPhone" is greater than 80% of total items.
-#
+#  It seems that there are mixed information on Wex_Challenge.pdf file related to 30% and 80% thresholds. Both validations were created.
   @ID-0002 @80Percent
   Scenario: 80% Of Shown Products Should Be Exclusively The Searched Product
     Given I open browser on Amazon

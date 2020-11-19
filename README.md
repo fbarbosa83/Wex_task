@@ -30,7 +30,7 @@ fill it with "Amazon Brasil" and the result with "www.amazon.com.br" should be c
  For this scenario, browse to Amazon's webpage, locate the Amazon's search bar, type "iPhone" and submit. 
  Count how many products are in the result list, how many of its items starts with "iPhone" name and how many contains the keyword "iPhone". 
  Then validate if the number of items which the name starts with iPhone is greater than 30% of total items and if the number of items that contains the keyword "iPhone" is greater than 80% of total items.
- 
+ It seems that there are mixed information on Wex_Challenge.pdf file related to 30% and 80% thresholds. Both validations were created.
 --- 
 #### Scenario @ID-0003 - The Higher Price In The First Page Can't Be Greater Than U$2000    
  Navigate to Amazon and search for "iPhone", compare and find what is the most expensive item which its name starts with "iPhone"

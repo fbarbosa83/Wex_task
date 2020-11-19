@@ -14,9 +14,6 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import sun.font.TrueTypeFont;
-
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class StepDefinitions {
@@ -207,9 +204,11 @@ public class StepDefinitions {
 
             }
         }
+        DecimalFormat numberFormat = new DecimalFormat("#.00");
+
         System.out.println("------------------------------------------------------------------");
         System.out.println("Most expensive item which its name starts with Iphone is: ");
-        System.out.println(pn + ". It costs R$" + iphonePrice);
+        System.out.println(pn + ". It costs R$" + numberFormat.format(iphonePrice));
         System.out.println("------------------------------------------------------------------");
 
 
@@ -221,7 +220,6 @@ public class StepDefinitions {
         assertTrue(isValid);
         RestRequests rest = new RestRequests();
         double convertedValue = rest.convertPriceToDollar(iphonePrice);
-        DecimalFormat numberFormat = new DecimalFormat("#.00");
         System.out.println("Converted value: US$ " + numberFormat.format(convertedValue));
         System.out.println("------------------------------------------------------------------");
         if (convertedValue > targetPrice){
@@ -272,8 +270,8 @@ public class StepDefinitions {
             }
 
         }
-
-        Boolean isValid = true;
+//it is failing here due to an item which costs more than 8k and doesn't have Iphone keyword
+        Boolean isValid = false;
         if(nonIphoneMostExpensivePrice < cheapestIphonePrice){
             isValid = true;
         }
