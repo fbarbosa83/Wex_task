@@ -1,0 +1,9 @@
+StepDefinitions\StepDefinitions.class
+Tests\AmazonTests.class
+BrowsingSettings\Setup.class
+Pages\WebPage.class
+Tests\GoogleTests.class
+Pages\GooglePage.class
+Support\Paths.class
+Pages\AmazonPage.class
+Support\RestRequests.class
